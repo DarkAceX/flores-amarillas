@@ -1,6 +1,7 @@
 function mostrarFlor() {
   const flor = document.getElementById('girasol');
   flor.hidden = false;
+  document.getElementById("mensajeBtn").hidden = false;
   iniciarCorazones();
 }
 
@@ -20,4 +21,8 @@ function iniciarCorazones() {
       particle.remove();
     }, 6000);
   }, 300);
+}
+
+function mostrarMensaje() {
+  document.getElementById("mensaje").hidden = false;
 }
