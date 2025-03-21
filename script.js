@@ -1,28 +1,15 @@
 function mostrarFlor() {
-  const flor = document.getElementById('girasol');
+  const flor = document.getElementById('flor');
+  const mensajeBtn = document.getElementById('mensajeBtn');
+  
+  // Mostrar el girasol y el botón del mensaje
   flor.hidden = false;
-  document.getElementById("mensajeBtn").hidden = false;
-  iniciarCorazones();
-}
-
-function iniciarCorazones() {
-  const emojis = ["❤️", "🌻"];
-  const particleContainer = document.getElementById("particles");
-
-  setInterval(() => {
-    const particle = document.createElement("div");
-    particle.classList.add("particle");
-    particle.innerText = emojis[Math.floor(Math.random() * emojis.length)];
-    particle.style.left = Math.random() * 100 + "vw";
-    particle.style.animationDuration = (Math.random() * 2 + 3) + "s";
-    particleContainer.appendChild(particle);
-
-    setTimeout(() => {
-      particle.remove();
-    }, 6000);
-  }, 300);
+  mensajeBtn.hidden = false;
 }
 
 function mostrarMensaje() {
-  document.getElementById("mensaje").hidden = false;
+  const mensaje = document.getElementById('mensaje');
+  
+  // Mostrar el mensaje final
+  mensaje.hidden = false;
 }
