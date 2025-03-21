@@ -30,13 +30,13 @@ button:hover {
   background-color: #e0a800;
 }
 
+/* Estilos para el girasol */
 .girasol {
   position: relative;
   width: 200px;
   height: 300px;
   margin: 60px auto;
-  animation: aparecer 1s ease-in-out;
-  animation: girasolBrillo 3s infinite alternate;
+  animation: aparecer 1s ease-in-out, girasolBrillo 3s infinite alternate;
 }
 
 @keyframes girasolBrillo {
@@ -50,15 +50,17 @@ button:hover {
   background-color: brown;
   border-radius: 50%;
   position: absolute;
-  top: 0;
-  left: 60px;
+  top: 50px; /* Ajuste para centrar verticalmente */
+  left: 50%;
+  transform: translateX(-50%);
   z-index: 2;
 }
 
 .petalos {
   position: absolute;
-  top: -10px;
-  left: 40px;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
   width: 120px;
   height: 120px;
   z-index: 1;
@@ -70,10 +72,10 @@ button:hover {
   background-color: yellow;
   border-radius: 20px 20px 0 0;
   position: absolute;
-  top: 20px;
-  left: 40px;
-  transform: rotate(var(--rot)) translateY(-40px);
-  transform-origin: center bottom;
+  top: 0;
+  left: 50%;
+  transform: rotate(var(--rot)) translate(-50%, -50%);
+  transform-origin: bottom center;
 }
 
 .tallo {
@@ -81,8 +83,9 @@ button:hover {
   height: 200px;
   background-color: green;
   position: absolute;
-  top: 80px;
-  left: 95px;
+  top: 130px; /* Ajuste para posicionar el tallo */
+  left: 50%;
+  transform: translateX(-50%);
   z-index: 0;
 }
 
