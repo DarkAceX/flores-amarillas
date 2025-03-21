@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Para mi Sol 🌻</title>
+  <title>Para ti, mi girasol 🌻</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -10,14 +10,27 @@
     <h1>"Estaré el resto de mi vida contigo, porque tú siempre serás mi camino."</h1>
     <button onclick="mostrarFlor()">Dale click para ver la flor especial 🌻</button>
     <p>🌻 Esta flor amarilla es solo para ti, mi sol. 🌻</p>
-    <div id="flor" class="flor" hidden>
+    <div id="girasol" class="girasol" hidden>
       <div class="centro"></div>
-      <div class="petalo petalo1"></div>
-      <div class="petalo petalo2"></div>
-      <div class="petalo petalo3"></div>
-      <div class="petalo petalo4"></div>
+      <div class="petalos">
+        <!-- 12 pétalos para un girasol más realista -->
+        <div class="petalo" style="--rot: 0deg;"></div>
+        <div class="petalo" style="--rot: 30deg;"></div>
+        <div class="petalo" style="--rot: 60deg;"></div>
+        <div class="petalo" style="--rot: 90deg;"></div>
+        <div class="petalo" style="--rot: 120deg;"></div>
+        <div class="petalo" style="--rot: 150deg;"></div>
+        <div class="petalo" style="--rot: 180deg;"></div>
+        <div class="petalo" style="--rot: 210deg;"></div>
+        <div class="petalo" style="--rot: 240deg;"></div>
+        <div class="petalo" style="--rot: 270deg;"></div>
+        <div class="petalo" style="--rot: 300deg;"></div>
+        <div class="petalo" style="--rot: 330deg;"></div>
+      </div>
       <div class="tallo"></div>
     </div>
+
+    <div id="particles"></div>
   </div>
   <script src="script.js"></script>
 </body>
