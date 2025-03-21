@@ -7,7 +7,7 @@ body {
   justify-content: center;
   align-items: center;
   margin: 0;
-  font-size: 20px; /* Tamaño base para calcular em y rem */
+  font-size: 30px; /* Tamaño base para calcular em y rem */
 }
 
 .container {
