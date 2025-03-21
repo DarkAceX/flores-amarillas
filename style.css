@@ -2,13 +2,16 @@ body {
   background-color: #fff9e6;
   font-family: 'Segoe UI', sans-serif;
   text-align: center;
+  overflow: hidden;
+}
+
+.container {
   padding: 40px;
 }
 
-.container h1 {
+h1 {
   font-size: 1.8em;
   color: #f4a300;
-  margin-bottom: 20px;
 }
 
 button {
@@ -26,50 +29,80 @@ button:hover {
   background-color: #e0a800;
 }
 
-.flor {
+.girasol {
   position: relative;
-  width: 100px;
-  height: 200px;
-  margin: 40px auto;
+  width: 200px;
+  height: 300px;
+  margin: 60px auto;
   animation: aparecer 1s ease-in-out;
 }
 
 .centro {
-  position: absolute;
-  top: 40px;
-  left: 35px;
-  width: 30px;
-  height: 30px;
-  background: brown;
+  width: 80px;
+  height: 80px;
+  background-color: brown;
   border-radius: 50%;
+  position: absolute;
+  top: 0;
+  left: 60px;
   z-index: 2;
 }
 
-.petalo {
+.petalos {
   position: absolute;
-  width: 60px;
-  height: 30px;
-  background: yellow;
-  border-radius: 50%;
+  top: -10px;
+  left: 40px;
+  width: 120px;
+  height: 120px;
   z-index: 1;
 }
 
-.petalo1 { top: 20px; left: 20px; transform: rotate(0deg); }
-.petalo2 { top: 20px; left: 20px; transform: rotate(45deg); }
-.petalo3 { top: 20px; left: 20px; transform: rotate(90deg); }
-.petalo4 { top: 20px; left: 20px; transform: rotate(135deg); }
+.petalo {
+  width: 40px;
+  height: 80px;
+  background-color: yellow;
+  border-radius: 20px 20px 0 0;
+  position: absolute;
+  top: 20px;
+  left: 40px;
+  transform: rotate(var(--rot)) translateY(-40px);
+  transform-origin: center bottom;
+}
 
 .tallo {
+  width: 10px;
+  height: 200px;
+  background-color: green;
   position: absolute;
-  top: 70px;
-  left: 48px;
-  width: 4px;
-  height: 100px;
-  background: green;
+  top: 80px;
+  left: 95px;
   z-index: 0;
 }
 
+/* Animación al aparecer */
 @keyframes aparecer {
   0% { transform: scale(0); opacity: 0; }
   100% { transform: scale(1); opacity: 1; }
+}
+
+/* Partículas */
+#particles {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.particle {
+  position: absolute;
+  font-size: 24px;
+  opacity: 0.8;
+  animation: caer 5s linear infinite;
+}
+
+@keyframes caer {
+  0% { transform: translateY(-10%); opacity: 1; }
+  100% { transform: translateY(110vh); opacity: 0; }
 }
