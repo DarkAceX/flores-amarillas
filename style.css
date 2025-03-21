@@ -8,7 +8,7 @@ body {
   align-items: center;
   height: 100vh;
   margin: 0;
-  font-size: 16px; /* Tamaño base para calcular em y rem */
+  font-size: 20px; /* Tamaño base para calcular em y rem */
 }
 
 .container {
