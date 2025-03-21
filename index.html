@@ -12,37 +12,37 @@
   </audio>
 
   <div class="container">
-    <h1>"Estaré el resto de mi vida contigo, porque tú siempre serás mi camino."</h1>
-    <button onclick="mostrarFlor()">Dale click para ver la flor especial 🌻</button>
-    <p>🌻 Esta flor amarilla es solo para ti, mi sol. 🌻</p>
-
-    <div id="girasol" class="girasol" hidden>
-      <div class="centro"></div>
-      <div class="petalos">
-        <!-- 12 pétalos -->
-        <div class="petalo" style="--rot: 0deg;"></div>
-        <div class="petalo" style="--rot: 30deg;"></div>
-        <div class="petalo" style="--rot: 60deg;"></div>
-        <div class="petalo" style="--rot: 90deg;"></div>
-        <div class="petalo" style="--rot: 120deg;"></div>
-        <div class="petalo" style="--rot: 150deg;"></div>
-        <div class="petalo" style="--rot: 180deg;"></div>
-        <div class="petalo" style="--rot: 210deg;"></div>
-        <div class="petalo" style="--rot: 240deg;"></div>
-        <div class="petalo" style="--rot: 270deg;"></div>
-        <div class="petalo" style="--rot: 300deg;"></div>
-        <div class="petalo" style="--rot: 330deg;"></div>
-      </div>
-      <div class="tallo"></div>
+    <h1>"Estaré el resto de mi vida contigo Melisa, porque tú siempre serás mi camino."</h1>
+    <button id="florBtn" onclick="mostrarFlor()">Dale click para ver la flor especial 🌻</button>
+    <div id="flor" class="flor" hidden>
+        <div class="petalos">
+          <!-- 12 pétalos -->
+          <div class="petalo" style="--rot: 0deg;"></div>
+          <div class="petalo" style="--rot: 30deg;"></div>
+          <div class="petalo" style="--rot: 60deg;"></div>
+          <div class="petalo" style="--rot: 90deg;"></div>
+          <div class="petalo" style="--rot: 120deg;"></div>
+          <div class="petalo" style="--rot: 150deg;"></div>
+          <div class="petalo" style="--rot: 180deg;"></div>
+          <div class="petalo" style="--rot: 210deg;"></div>
+          <div class="petalo" style="--rot: 240deg;"></div>
+          <div class="petalo" style="--rot: 270deg;"></div>
+          <div class="petalo" style="--rot: 300deg;"></div>
+          <div class="petalo" style="--rot: 330deg;"></div>
+        </div>
+        <div class="centro"></div>
+        <div class="tallo">
+          <div class="hoja"></div>
+        </div>
     </div>
 
-    <button id="mensajeBtn" onclick="mostrarMensaje()" hidden>Haz clic para leer mi último mensaje 💌</button>
+    <button id="mensajeBtn" class="boton-2" onclick="mostrarMensaje()" hidden>Haz clic para leer mi último mensaje 💌</button>
     <div id="mensaje" hidden>
-      <p class="mensaje-final">Gracias por existir, por brillar como el sol y por ser mi girasol en este jardín de locura. Te amo. 🌻❤️</p>
+      <p class="mensaje-final">Gracias por existir, brillas como el sol y eres la flor que resalta en mi corazon. Te amo mi negrita bella. 🌻❤️</p>
     </div>
-
-    <div id="particles"></div>
   </div>
+
+  <div id="particles"></div>
   <script src="script.js"></script>
 </body>
 </html>
