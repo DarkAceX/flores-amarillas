@@ -1,0 +1,75 @@
+body {
+  background-color: #fff9e6;
+  font-family: 'Segoe UI', sans-serif;
+  text-align: center;
+  padding: 40px;
+}
+
+.container h1 {
+  font-size: 1.8em;
+  color: #f4a300;
+  margin-bottom: 20px;
+}
+
+button {
+  background-color: #ffc107;
+  color: #333;
+  padding: 12px 24px;
+  font-size: 1em;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background-color: #e0a800;
+}
+
+.flor {
+  position: relative;
+  width: 100px;
+  height: 200px;
+  margin: 40px auto;
+  animation: aparecer 1s ease-in-out;
+}
+
+.centro {
+  position: absolute;
+  top: 40px;
+  left: 35px;
+  width: 30px;
+  height: 30px;
+  background: brown;
+  border-radius: 50%;
+  z-index: 2;
+}
+
+.petalo {
+  position: absolute;
+  width: 60px;
+  height: 30px;
+  background: yellow;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.petalo1 { top: 20px; left: 20px; transform: rotate(0deg); }
+.petalo2 { top: 20px; left: 20px; transform: rotate(45deg); }
+.petalo3 { top: 20px; left: 20px; transform: rotate(90deg); }
+.petalo4 { top: 20px; left: 20px; transform: rotate(135deg); }
+
+.tallo {
+  position: absolute;
+  top: 70px;
+  left: 48px;
+  width: 4px;
+  height: 100px;
+  background: green;
+  z-index: 0;
+}
+
+@keyframes aparecer {
+  0% { transform: scale(0); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
