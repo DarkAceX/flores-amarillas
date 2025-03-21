@@ -2,11 +2,15 @@ body {
   background-color: #fff9e6;
   font-family: 'Segoe UI', sans-serif;
   text-align: center;
-  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
 }
 
 .container {
-  padding: 40px;
+  text-align: center;
 }
 
 h1 {
@@ -23,7 +27,12 @@ button {
   border-radius: 12px;
   cursor: pointer;
   transition: all 0.3s ease;
-  margin: 10px;
+  margin: 30px;
+}
+
+.boton-2{
+  background-color: #f4a300;
+  margin-top: 20%;
 }
 
 button:hover {
@@ -31,12 +40,11 @@ button:hover {
 }
 
 /* Estilos para el girasol */
-.girasol {
+.flor {
   position: relative;
   width: 200px;
   height: 300px;
-  margin: 60px auto;
-  animation: aparecer 1s ease-in-out, girasolBrillo 3s infinite alternate;
+  margin: 20px auto;
 }
 
 @keyframes girasolBrillo {
@@ -45,48 +53,70 @@ button:hover {
 }
 
 .centro {
-  width: 80px;
-  height: 80px;
-  background-color: brown;
+  width: 90px;
+  height: 90px;
+  background: radial-gradient(circle, #8b4513 0%, #5a2d0c 100%);
   border-radius: 50%;
   position: absolute;
-  top: 50px; /* Ajuste para centrar verticalmente */
+  top: 50%;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translate(-50%, -50%);
   z-index: 2;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  animation: girasolBrillo 3s infinite alternate;
 }
 
 .petalos {
   position: absolute;
-  top: 0;
+  top: 50%;
   left: 50%;
-  transform: translateX(-50%);
-  width: 120px;
-  height: 120px;
+  transform: translate(-60%, -40%);
+  width: 200px;
+  height: 200px;
   z-index: 1;
 }
 
 .petalo {
   width: 40px;
   height: 80px;
-  background-color: yellow;
+  background: radial-gradient(circle, #ffeb3b 0%, #fbc02d 100%);
   border-radius: 20px 20px 0 0;
   position: absolute;
   top: 0;
   left: 50%;
   transform: rotate(var(--rot)) translate(-50%, -50%);
   transform-origin: bottom center;
+  animation: moverPetalo 3s infinite ease-in-out;
+}
+
+@keyframes moverPetalo {
+  0%, 100% { transform: rotate(var(--rot)) translate(-50%, -50%) scale(1); }
+  50% { transform: rotate(calc(var(--rot) + 2deg)) translate(-50%, -50%) scale(1.05); }
 }
 
 .tallo {
   width: 10px;
-  height: 200px;
-  background-color: green;
+  height: 250px;
+  background-color: #228b22;
   position: absolute;
-  top: 130px; /* Ajuste para posicionar el tallo */
+  top: 160px;
   left: 50%;
   transform: translateX(-50%);
   z-index: 0;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+.hoja {
+  width: 50px;
+  height: 20px;
+  background-color: #32cd32;
+  position: absolute;
+  top: 180px;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-30deg);
+  border-radius: 20px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
 }
 
 @keyframes aparecer {
@@ -123,3 +153,4 @@ button:hover {
   padding-top: 20px;
   animation: aparecer 2s ease-in-out;
 }
+
