@@ -153,4 +153,64 @@ button:hover {
   padding-top: 20px;
   animation: aparecer 2s ease-in-out;
 }
+/* Estilos generales para pantallas pequeñas */
+@media (max-width: 480px) {
+  body {
+    flex-direction: column;
+    padding: 20px;
+    height: auto; /* Permitir que el contenido fluya */
+  }
+
+  .container {
+    width: 100%;
+    padding: 10px;
+  }
+
+  h1 {
+    font-size: 1.4em; /* Reducir el tamaño del texto */
+    margin-bottom: 20px;
+  }
+
+  button {
+    font-size: 0.9em; /* Ajustar el tamaño del botón */
+    padding: 10px 20px;
+    margin: 20px auto;
+  }
+
+  .flor {
+    width: 150px; /* Reducir el tamaño del girasol */
+    height: 250px;
+    margin: 20px auto;
+  }
+
+  .petalos {
+    width: 150px;
+    height: 150px;
+  }
+
+  .petalo {
+    width: 30px; /* Reducir el tamaño de los pétalos */
+    height: 60px;
+  }
+
+  .centro {
+    width: 60px; /* Reducir el tamaño del centro */
+    height: 60px;
+  }
+
+  .tallo {
+    width: 8px; /* Ajustar el grosor del tallo */
+    height: 180px; /* Reducir la altura del tallo */
+  }
+
+  .hoja {
+    width: 40px; /* Reducir el tamaño de la hoja */
+    height: 15px;
+  }
+
+  .mensaje-final {
+    font-size: 1.2em; /* Ajustar el tamaño del texto del mensaje */
+    padding: 10px;
+  }
+}
 
